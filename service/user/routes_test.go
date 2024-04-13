@@ -43,8 +43,8 @@ func TestUserServiceHandlers(t *testing.T) {
 		payload := types.RegisterUserPayload{
 			FirstName: "John",
 			LastName:  "Firulo",
-			Email:     "pfirulo@example.com",
-			Password:  "123456789",
+			Email:     "pfirulo@exp.com",
+			Password:  "12345",
 		}
 
 		marshalled, _ := json.Marshal(payload)
@@ -62,6 +62,7 @@ func TestUserServiceHandlers(t *testing.T) {
 			t.Errorf("Expected status code %d, got %d", http.StatusCreated, rr.Code)
 		}
 	})
+
 }
 
 type mockUserStore struct{}
